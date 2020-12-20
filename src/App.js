@@ -18,12 +18,6 @@ export default function App() {
 
   const classes = useStyles();
 
-  useEffect(() => {
-    axios.get('/api/data').then(response => {
-      console.log(response.data);
-    })
-  },[])
-
 
   return (
     <Router>
