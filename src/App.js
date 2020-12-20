@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-import Nav from '../src/components/Nav';
-import Login from './components/pages/Login';
-import Home from './components/pages/Home';
+import Nav from './components/nav/Nav';
+import Login from './components/pages/login/Login';
+import Home from './components/pages/home/Home';
 const axios = require('axios');
 
 const useStyles = makeStyles((theme) => ({
@@ -29,7 +29,6 @@ export default function App() {
     <Router>
       <div className={classes.root}>
         <Nav></Nav>
-
         <Switch>
           <Route path="/login" component={Login}/>
           <Route path="/" component={Home}/>
